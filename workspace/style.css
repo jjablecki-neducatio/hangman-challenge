@@ -69,6 +69,14 @@ body {
   color: #222;
 }
 
+input[type="button"] {
+  top: 64vh;
+  left: 83vh;
+  width: 250px;
+  height: 100px;
+  font-size: 0.2em;
+}
+
 /* hide default checkbox */
 input {
   position: absolute;
