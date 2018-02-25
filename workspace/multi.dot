@@ -2,53 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/answer.css">
+  <link rel="stylesheet" href="/vader.css">
+  <link rel="stylesheet" href="/hangman.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <title>Hangman challenge</title>
 </head>
 <body>
-  <div>
-    <p>Alphabet:
-      {{~it.alphabet :letter:letterIndex}}
-      <span class="letter-{{=letter}}">{{=letter}}</span>
-      {{~}}
-    </p>
-
-    <p>Number of words: {{=it.numWords}}</p>
-
-    <p>Words:</p>
-    <ul>
-    {{~it.words :data:index}}
-      <li>
-        <p>Word {{=index+1}} <span>{{=data.word}}</span><p>
-        <p>Number of letters: {{=data.numberOfLetters}}</p>
-        <p>Letter by letter in word:
-        {{~data.word :letter:letterIndex}}
-          <span>{{=letter}}{{?letterIndex < data.numberOfLetters - 1}},{{?}} </span>
-        {{~}}
-        </p>
-        <p>Number of unique letters used in word: {{=data.numberOfLettersInWord}}</p>
-        <p>Unique letters used in word:
-        {{~data.lettersInWord :letter:letterIndex}}
-          <span>{{=letter}}{{?letterIndex < data.numberOfLettersInWord - 1}},{{?}} </span>
-        {{~}}
-        </p>
-        <p>Number of letters not used in word: {{=data.numberOfLettersNotInWord}}</p>
-        <p>Letters not used in word:
-        {{~data.lettersNotInWord :letter:letterIndex}}
-          <span>{{=letter}}{{?letterIndex < data.numberOfLettersNotInWord - 1}},{{?}}</span>
-        {{~}}
-        </p>
-      </li>
+  <section class="alphabet">
+    {{~it.alphabet :letter:letterIndex}}
+    <input type="checkbox" id="{{=letter}}" class="{{?it.words[0].word.includes(letter)}}good{{??}}bad{{?}}"></input>
+    <label for="{{=letter}}" class="letter {{?it.words[0].word.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
     {{~}}
-    </ul>
+    <div class="answer">
+      {{~it.words[0].word :letter:letterIndex}}
+      <div><span class="letter letter-{{=letter}}">{{=letter}}</span></div>
+      {{~}}
+      <br/>
+    </div>
+    <div id="win" class="pop-up">
+      <h1>Wygrana!</h1>
+      <input type="checkbox" class="next" id="word-0"></input>
+      <label for="word-0" class="letter next" >Kolejne słowo</label>
+      <div class="second-word" >
+      <div class="alphabet">
+        {{~it.alphabet :letter:letterIndex}}
+        <input type="checkbox" id="{{=letter}}-1" class="{{?it.words[1].word.includes(letter)}}good{{??}}bad{{?}}"></input>
+        <label for="{{=letter}}-1" class="letter {{?it.words[1].word.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
+        {{~}}
+        <div class="answer">
+          {{~it.words[1].word :letter:letterIndex}}
+          <div><span class="letter letter-1-{{=letter}}">{{=letter}}</span></div>
+          {{~}}
+          <br/>
+        </div>
+        <div id="win" class="pop-up">
+          <h1>Wygrana!</h1>
+        </div>
+        <div id="game-over" class="pop-up">
+          <h1>Koniec gry!</h1>
+          <input type="button" value="jeszcze raz" onClick="window.location.reload()">
+        </div>
+        <div class="hangman">
+          <div class="click click-1"></div>
+          <div class="click click-2"></div>
+          <div class="click click-3"></div>
+          <div class="click click-4"></div>
+          <div class="vader_wrapper">
+            <div class="corp"></div>
+            <div class="cloak-right"></div>
+            <div class="cloak-left"></div>
+            <div class="sword">
+              <div class="blade"></div>
+              <div class="grip"></div>
+            </div>
+            <div class="head">
+              <div class="vader_head_top"></div>
+              <div class="vader_head_right_shade"></div>
+              <div class="vader_head_left"></div>
+              <div class="vader_head_right"></div>
+              <div class="vader_head_left_shadow"></div>
+              <div class="vader_head_right_shadow"></div>
+              <div class="vader_right_eye"></div>
+              <div class="vader_left_eye"></div>
+              <div class="vader_respirator_1"></div>
+              <div class="vader_respirator_2"></div>
+              <div class="vader_respirator_3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-  <p>{{=it.words[0].word}}</p>
-  <p>{{=it.words[1].word}}</p>
-  <p>{{=it.words[2].word}}</p>
-  <p>{{=it.words[3].word}}</p>
-  <p>{{=it.words[4].word}}</p>
-  </div>
+    <div id="game-over" class="pop-up">
+      <h1>Koniec gry!</h1>
+      <input type="button" value="jeszcze raz" onClick="window.location.reload()">
+    </div>
+    <div class="hangman">
+      <div class="click click-1"></div>
+      <div class="click click-2"></div>
+      <div class="click click-3"></div>
+      <div class="click click-4"></div>
+      <div class="vader_wrapper">
+        <div class="corp"></div>
+        <div class="cloak-right"></div>
+        <div class="cloak-left"></div>
+        <div class="sword">
+          <div class="blade"></div>
+          <div class="grip"></div>
+        </div>
+        <div class="head">
+          <div class="vader_head_top"></div>
+          <div class="vader_head_right_shade"></div>
+          <div class="vader_head_left"></div>
+          <div class="vader_head_right"></div>
+          <div class="vader_head_left_shadow"></div>
+          <div class="vader_head_right_shadow"></div>
+          <div class="vader_right_eye"></div>
+          <div class="vader_left_eye"></div>
+          <div class="vader_respirator_1"></div>
+          <div class="vader_respirator_2"></div>
+          <div class="vader_respirator_3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

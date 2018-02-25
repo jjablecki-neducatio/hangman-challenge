@@ -49,11 +49,14 @@ body {
 .pop-up {
   height: 100%;
   width: 100%;
-  font-size: 5em;
   position: absolute;
   z-index: 99;
   top: 0;
   text-align: center;
+}
+
+.pop-up h1 {
+  font-size: 5em;
 }
 
 #win {
@@ -74,7 +77,7 @@ input[type="button"] {
   left: 83vh;
   width: 250px;
   height: 100px;
-  font-size: 0.5em;
+  font-size: 2.5em;
 }
 
 /* hide default checkbox */
@@ -144,4 +147,20 @@ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ 
 }
 input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .blade {
   visibility: visible;
+}
+
+.next:checked ~ .second-word {
+  visibility: visible;
+}
+
+.second-word *{
+  visibility: none;
+}
+
+.second-word {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: tan;
+  height: 100%;
 }
