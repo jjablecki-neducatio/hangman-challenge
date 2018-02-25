@@ -1,0 +1,263 @@
+.vader_wrapper{
+	position: relative;
+	height: 200px;
+	width: 200px;
+	margin: 110px auto;
+	transform: scale(0.55);
+}
+
+.corp {
+	background-color: #333;
+	height: 245px;
+	width: 200px;
+	border-radius: 100px;
+	box-shadow: 0px 1px 15px -5px black;
+	position: absolute;
+	top: 275px;
+}
+
+.cloak-right {
+	position: absolute;
+	height: 0;
+	width: 0;
+	top: 1px;
+	left: 120px;
+	border-right: 95px solid #222;
+	border-bottom: 245px solid #222;
+	border-radius: 0% 100% 10% 0% / 0% 71%;
+}
+
+.cloak-left {
+	position: absolute;
+	height: 0;
+	width: 0;
+	top: 1px;
+	right: 120px;
+	border-right: 95px solid #222;
+	border-bottom: 245px solid #222;
+	border-radius: 0% 100% 10% 0% / 0% 71%;
+	transform: scaleX(-1);
+}
+
+.vader_head_top{
+	position: absolute;
+	top: 0;
+	background-color: #333;
+	height: 245px;
+	width: 200px;
+	border-radius: 100px;
+	box-shadow: 0px 1px 15px -5px black;
+}
+
+.vader_head_top:after{
+	content: '';
+	position: absolute;
+	height: 65px;
+	width: 45px;
+	top: 35px; left: 20px;
+	background-color: #444;
+	opacity: .7;
+	border-radius: 50%;
+	transform: rotate(25deg);
+}
+
+.vader_head_right_shade{
+	position: absolute;
+	height: 0;
+	width: 0;
+	top: 1px; left: 107px;
+	border-right: 95px solid #222;
+	border-bottom: 150px solid #222;
+	border-radius: 0% 100% 10% 0% / 0% 71%;
+	//-moz-border-radius: 0% 100% 10% 0% / 0% 71%;
+}
+
+.vader_head_left{
+	position: absolute;
+	top: 126px; left: -10px;
+	height: 170px;
+	width: 150px;
+	background-color: #333;
+	transform: rotate(-60deg);
+	box-shadow: -15px 15px 20px -15px black;
+}
+
+.vader_head_left_shadow{
+	position: absolute;
+	width: 160px;
+	height: 150px;
+	background-color: #111;
+	top: 138px; left: -10px;
+	transform: rotate(30deg);
+	border-radius: 50%  50%  0%  0%  / 100%   100%   0%  0%;
+}
+
+.vader_head_right{
+	position: absolute;
+	top: 126px; left: 63px;
+	height: 170px;
+	width: 150px;
+	background-color: #222;
+	transform: rotate(60deg);
+	box-shadow: 15px 15px 20px -15px black;
+}
+
+.vader_head_right_shadow{
+	position: absolute;
+	width: 160px;
+	height: 150px;
+	background-color: #111;
+	top: 138px; left: 53px;
+	transform: rotate(-30deg);
+	border-radius: 50%  50%  0%  0%  / 100%   100%   0%  0%;
+}
+
+.vader_left_eye{
+	position: absolute;
+	height: 45px;
+	width: 68px;
+	border-radius: 70% 50% 20% 45% / 75% 55% 45% 45%;
+	background-color: #bdc3c7;
+	top: 165px; left: 27px;
+	box-shadow: 0 4px 3px #444;
+}
+
+.vader_left_eye:before{
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 55px; left: 9px;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 45px solid #222;
+	transform: rotate(-52deg);
+}
+
+.vader_right_eye{
+	position: absolute;
+	height: 45px;
+	width: 68px;
+	border-radius: 50% 70% 45% 20% / 55% 75% 45% 45%;
+	background-color: #bdc3c7;
+	top: 165px; left: 108px;
+	box-shadow: 0 4px 3px #444;
+}
+
+.vader_right_eye:before{
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 55px; left: 12px;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 45px solid #222;
+	transform: rotate(52deg);
+}
+
+.vader_respirator_1{
+	position: absolute;
+	height: 55px;
+	width: 6px;
+	background-color: #555;
+	top: 235px; left: 100px;
+}
+.vader_respirator_1:after{
+	content: '';
+	position: absolute;
+	height: 40px;
+	width: 6px;
+	background-color: #555;
+	top: 15px; left: 10px;
+}
+.vader_respirator_1:before{
+	content: '';
+	position: absolute;
+	height: 40px;
+	width: 6px;
+	background-color: #555;
+	top: 15px; left: -10px;
+}
+
+.vader_respirator_2{
+	position: absolute;
+	height: 10px;
+	width: 13px;
+	background-color: #777;
+	top: 220px; left: 96px;
+	border-radius: 50% 50% 0 0;
+}
+
+.vader_respirator_2:after{
+	content: '';
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	background-color: #777;
+	top: 60px; left: 35px;
+	border-radius: 50%;
+}
+
+.vader_respirator_2:before{
+	content: '';
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	background-color: #777;
+	top: 60px; left: -30px;
+	border-radius: 50%;
+}
+
+.vader_respirator_3{
+	position: absolute;
+	height: 25px;
+	width: 6px;
+	background-color: #555;
+	top: 265px; left: 79px;
+}
+
+.vader_respirator_3:after{
+	content: '';
+	position: absolute;
+	height: 25px;
+	width: 6px;
+	background-color: #555;
+	top: 0px; left: 42px;
+}
+
+.vader_respirator_3:before{
+	content: '';
+	position: absolute;
+	height: 153px;
+	width: 14px;
+	background-color: #444;
+	top: -267px; left: 14px;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0px 1px 10px -5px black;
+}
+
+.sword {
+	position: absolute;
+	left: 285px;
+	transform: rotate(40deg);
+}
+
+.grip {
+	height: 6rem;
+	width: .5rem;
+	background-color: #111;
+}
+
+.blade {
+	height: 20rem;
+	width: .5rem;
+	border-top-right-radius: 0.2rem;
+	border-top-left-radius: 0.2rem;
+	background-color: hsla(0, 100%, 67%, 1);
+	box-shadow: 0 0 2rem .5rem hsla(0, 50%, 59%, .7);
+}
+
+.head, .corp, .sword {
+	visibility: hidden;
+}
