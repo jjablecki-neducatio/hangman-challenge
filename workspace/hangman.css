@@ -2,7 +2,6 @@
   position: absolute;
   background-color: hsla(0, 100%, 67%, 1);
   box-shadow: 0 0 10rem 0.5rem hsla(0, 50%, 59%, .7);
-  visibility: hidden;
 }
 
 .click-1 {

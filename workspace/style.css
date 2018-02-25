@@ -6,7 +6,7 @@ body {
 
 .alphabet {
   width: 46%;
-  counter-reset: sum 8;
+  counter-reset: sum 6;
 }
 
 .hangman {
@@ -126,28 +126,22 @@ input.good:not(:checked) ~ #win {
   visibility: hidden;
 }
 
-input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ #game-over {
+input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ #game-over {
   visibility: visible;
 }
 
-input.bad:checked ~ .hangman .click-1 {
+input.bad:checked ~ .hangman .head {
   visibility: visible;
 }
-input.bad:checked ~ input.bad:checked ~ .hangman .click-2 {
+input.bad:checked ~ input.bad:checked ~ .hangman .corp  {
   visibility: visible;
 }
-input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .click-3 {
+input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .cloak-left, input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .cloak-right {
   visibility: visible;
 }
-input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .click-4 {
+input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .grip {
   visibility: visible;
 }
-input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .head {
-  visibility: visible;
-}
-input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .corp  {
-  visibility: visible;
-}
-input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .sword {
+input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .blade {
   visibility: visible;
 }

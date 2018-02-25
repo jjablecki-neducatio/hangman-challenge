@@ -36,10 +36,9 @@
         <div class="click click-3"></div>
         <div class="click click-4"></div>
         <div class="vader_wrapper">
-          <div class="corp">
+          <div class="corp"></div>
             <div class="cloak-right"></div>
             <div class="cloak-left"></div>
-          </div>
           <div class="sword">
             <div class="blade"></div>
             <div class="grip"></div>

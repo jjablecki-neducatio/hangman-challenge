@@ -20,7 +20,7 @@
 	position: absolute;
 	height: 0;
 	width: 0;
-	top: 1px;
+	top: 280px;
 	left: 120px;
 	border-right: 95px solid #222;
 	border-bottom: 245px solid #222;
@@ -31,7 +31,7 @@
 	position: absolute;
 	height: 0;
 	width: 0;
-	top: 1px;
+	top: 280px;
 	right: 120px;
 	border-right: 95px solid #222;
 	border-bottom: 245px solid #222;
@@ -258,6 +258,6 @@
 	box-shadow: 0 0 2rem .5rem hsla(0, 50%, 59%, .7);
 }
 
-.head, .corp, .sword {
+.head, .corp, .sword, .cloak-left, .cloak-right {
 	visibility: hidden;
 }
