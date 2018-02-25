@@ -14,7 +14,7 @@
   <section>
     <div class="alphabet">
       {{~it.alphabet :letter:letterIndex}}
-      <input type="checkbox" id="{{=letter}}" class="{{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">
+      <input type="checkbox" onclick="disabled=true" id="{{=letter}}" class="{{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">
       <label for="{{=letter}}" class="letter {{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
       {{~}}
       <div class="answer">
