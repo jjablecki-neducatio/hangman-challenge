@@ -11,53 +11,52 @@
   <title>Hangman challenge</title>
 </head>
 <body>
-  <section>
-    <div class="alphabet">
-      {{~it.alphabet :letter:letterIndex}}
-      <input type="checkbox" onclick="disabled=true" id="{{=letter}}" class="{{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">
-      <label for="{{=letter}}" class="letter {{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
+  <div class="alphabet">
+    {{~it.alphabet :letter:letterIndex}}
+    <input type="checkbox" onclick="disabled=true" id="{{=letter}}" class="{{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">
+    <label for="{{=letter}}" class="letter {{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
+    {{~}}
+    <div class="answer">
+      {{~it.word :letter:letterIndex}}
+      <div><span class="letter letter-{{=letter}}">{{=letter}}</span></div>
       {{~}}
-      <div class="answer">
-        {{~it.word :letter:letterIndex}}
-        <div><span class="letter letter-{{=letter}}">{{=letter}}</span></div>
-        {{~}}
-        <br/>
-      </div>
-      <div id="win" class="pop-up">
-        <h1>Wygrana!</h1>
-      </div>
-      <div id="game-over" class="pop-up">
-        <h1>Koniec gry!</h1>
-        <input type="button" value="jeszcze raz" onClick="window.location.reload()">
-      </div>
-      <div class="hangman">
-        <div class="click click-1"></div>
-        <div class="click click-2"></div>
-        <div class="click click-3"></div>
-        <div class="click click-4"></div>
-        <div class="vader_wrapper">
-          <div class="corp"></div>
-            <div class="cloak-right"></div>
-            <div class="cloak-left"></div>
-          <div class="sword">
-            <div class="blade"></div>
-            <div class="grip"></div>
-          </div>
-          <div class="head">
-            <div class="vader_head_top"></div>
-            <div class="vader_head_right_shade"></div>
-            <div class="vader_head_left"></div>
-            <div class="vader_head_right"></div>
-            <div class="vader_head_left_shadow"></div>
-            <div class="vader_head_right_shadow"></div>
-            <div class="vader_right_eye"></div>
-            <div class="vader_left_eye"></div>
-            <div class="vader_respirator_1"></div>
-            <div class="vader_respirator_2"></div>
-            <div class="vader_respirator_3"></div>
-          </div>
+      <br/>
+    </div>
+    <div id="win" class="pop-up">
+      <h1>Wygrana!</h1>
+    </div>
+    <div id="game-over" class="pop-up">
+      <h1>Koniec gry!</h1>
+      <input type="button" value="jeszcze raz" onClick="window.location.reload()">
+    </div>
+    <div class="hangman">
+      <div class="click click-1"></div>
+      <div class="click click-2"></div>
+      <div class="click click-3"></div>
+      <div class="click click-4"></div>
+      <div class="vader_wrapper">
+        <div class="corp"></div>
+        <div class="cloak-right"></div>
+        <div class="cloak-left"></div>
+        <div class="sword">
+          <div class="blade"></div>
+          <div class="grip"></div>
+        </div>
+        <div class="head">
+          <div class="vader_head_top"></div>
+          <div class="vader_head_right_shade"></div>
+          <div class="vader_head_left"></div>
+          <div class="vader_head_right"></div>
+          <div class="vader_head_left_shadow"></div>
+          <div class="vader_head_right_shadow"></div>
+          <div class="vader_right_eye"></div>
+          <div class="vader_left_eye"></div>
+          <div class="vader_respirator_1"></div>
+          <div class="vader_respirator_2"></div>
+          <div class="vader_respirator_3"></div>
         </div>
       </div>
     </div>
-  </body>
-  </html>
+  </div>
+</body>
+</html>
