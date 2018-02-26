@@ -155,6 +155,12 @@ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ 
   visibility: visible;
 }
 
+input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .sword {
+  top: 260px;
+  left: 300px;
+  transform: rotate(130deg);
+}
+
 .next:checked ~ .second-word {
   visibility: visible;
 }
