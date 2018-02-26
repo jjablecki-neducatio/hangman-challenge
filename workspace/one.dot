@@ -13,7 +13,7 @@
 <body>
   <div class="alphabet">
     {{~it.alphabet :letter:letterIndex}}
-    <input type="checkbox" onclick="disabled=true" id="{{=letter}}" class="{{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">
+    <input type="checkbox" id="{{=letter}}" class="{{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">
     <label for="{{=letter}}" class="letter {{?it.lettersInWord.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
     {{~}}
     <div class="answer">
@@ -24,10 +24,11 @@
     </div>
     <div id="win" class="pop-up">
       <h1>Wygrana!</h1>
+      <a href="" class="reload">jeszcze raz</a>
     </div>
     <div id="game-over" class="pop-up">
       <h1>Koniec gry!</h1>
-      <input type="button" value="jeszcze raz" onClick="window.location.reload()">
+      <a href="" class="reload">jeszcze raz</a>
     </div>
     <div class="hangman">
       <div class="click click-1"></div>

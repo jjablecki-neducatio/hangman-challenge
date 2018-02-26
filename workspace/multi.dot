@@ -43,7 +43,7 @@
         </div>
         <div id="game-over" class="pop-up">
           <h1>Koniec gry!</h1>
-          <input type="button" value="jeszcze raz" onClick="window.location.reload()">
+          <a href="" class="reload">jeszcze raz</a>
         </div>
         <div class="hangman">
           <div class="click click-1"></div>
@@ -78,7 +78,7 @@
   </div>
     <div id="game-over" class="pop-up">
       <h1>Koniec gry!</h1>
-      <input type="button" value="jeszcze raz" onClick="window.location.reload()">
+      <a href="" class="reload">jeszcze raz</a>
     </div>
     <div class="hangman">
       <div class="click click-1"></div>

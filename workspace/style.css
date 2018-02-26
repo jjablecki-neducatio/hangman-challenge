@@ -72,19 +72,23 @@ body {
   color: #222;
 }
 
-input[type="button"] {
-  top: 40vh;
-  left: 83vh;
-  width: 250px;
-  height: 100px;
-  font-size: 2.5em;
+.reload {
+  color: #000000;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 2.8em;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 40px;
+  border: solid 2px #fff;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* hide default checkbox */
-input {
+input:not([type="button"]) {
   position: absolute;
-  top: -25px;
-  left: -25px;
+  top: -999px;
+  left: -999px;
 }
 
 /* create custom labels */
@@ -109,12 +113,14 @@ input {
 
 /* change bg color of letter on click */
 input:checked + label.bad {
+  pointer-events: none;
   background-color: #0A0A0A;
   color: #555252;
   border: solid 2px hsla(0, 100%, 67%, 1);
   box-shadow: 0 0 2rem 0.5rem hsla(0, 50%, 59%, .7);
 }
 input:checked + label.good {
+  pointer-events: none;
   background-color: #0A0A0A;
   color: #555252;
   border: solid 2px hsl(120, 100%, 65%);
@@ -161,6 +167,7 @@ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ 
   position: absolute;
   top: 0;
   left: 0;
-  background-color: tan;
+  color: #585858;
+  background-color: #0A0A0A;
   height: 100%;
 }
