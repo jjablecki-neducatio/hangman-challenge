@@ -1,4 +1,4 @@
-.vader_wrapper{
+.vader-wrapper{
 	position: relative;
 	height: 200px;
 	width: 200px;
@@ -39,7 +39,7 @@
 	transform: scaleX(-1);
 }
 
-.vader_head_top{
+.vader-head-top{
 	position: absolute;
 	top: 0;
 	background-color: #333;
@@ -49,7 +49,7 @@
 	box-shadow: 0px 1px 15px -5px black;
 }
 
-.vader_head_top:after{
+.vader-head-top:after{
 	content: '';
 	position: absolute;
 	height: 65px;
@@ -61,7 +61,7 @@
 	transform: rotate(25deg);
 }
 
-.vader_head_right_shade{
+.vader-head-right-shade{
 	position: absolute;
 	height: 0;
 	width: 0;
@@ -72,7 +72,7 @@
 	//-moz-border-radius: 0% 100% 10% 0% / 0% 71%;
 }
 
-.vader_head_left{
+.vader-head-left{
 	position: absolute;
 	top: 126px; left: -10px;
 	height: 170px;
@@ -82,7 +82,7 @@
 	box-shadow: -15px 15px 20px -15px black;
 }
 
-.vader_head_left_shadow{
+.vader-head-left-shadow{
 	position: absolute;
 	width: 160px;
 	height: 150px;
@@ -92,7 +92,7 @@
 	border-radius: 50%  50%  0%  0%  / 100%   100%   0%  0%;
 }
 
-.vader_head_right{
+.vader-head-right{
 	position: absolute;
 	top: 126px; left: 63px;
 	height: 170px;
@@ -102,7 +102,7 @@
 	box-shadow: 15px 15px 20px -15px black;
 }
 
-.vader_head_right_shadow{
+.vader-head-right-shadow{
 	position: absolute;
 	width: 160px;
 	height: 150px;
@@ -112,7 +112,7 @@
 	border-radius: 50%  50%  0%  0%  / 100%   100%   0%  0%;
 }
 
-.vader_left_eye{
+.vader-left-eye{
 	position: absolute;
 	height: 45px;
 	width: 68px;
@@ -122,7 +122,7 @@
 	box-shadow: 0 4px 3px #444;
 }
 
-.vader_left_eye:before{
+.vader-left-eye:before{
 	content: '';
 	width: 0;
 	height: 0;
@@ -134,7 +134,7 @@
 	transform: rotate(-52deg);
 }
 
-.vader_right_eye{
+.vader-right-eye{
 	position: absolute;
 	height: 45px;
 	width: 68px;
@@ -144,7 +144,7 @@
 	box-shadow: 0 4px 3px #444;
 }
 
-.vader_right_eye:before{
+.vader-right-eye:before{
 	content: '';
 	width: 0;
 	height: 0;
@@ -156,14 +156,14 @@
 	transform: rotate(52deg);
 }
 
-.vader_respirator_1{
+.vader-respirator-1{
 	position: absolute;
 	height: 55px;
 	width: 6px;
 	background-color: #555;
 	top: 235px; left: 100px;
 }
-.vader_respirator_1:after{
+.vader-respirator-1:after{
 	content: '';
 	position: absolute;
 	height: 40px;
@@ -171,7 +171,7 @@
 	background-color: #555;
 	top: 15px; left: 10px;
 }
-.vader_respirator_1:before{
+.vader-respirator-1:before{
 	content: '';
 	position: absolute;
 	height: 40px;
@@ -180,7 +180,7 @@
 	top: 15px; left: -10px;
 }
 
-.vader_respirator_2{
+.vader-respirator-2{
 	position: absolute;
 	height: 10px;
 	width: 13px;
@@ -189,7 +189,7 @@
 	border-radius: 50% 50% 0 0;
 }
 
-.vader_respirator_2:after{
+.vader-respirator-2:after{
 	content: '';
 	position: absolute;
 	height: 8px;
@@ -199,7 +199,7 @@
 	border-radius: 50%;
 }
 
-.vader_respirator_2:before{
+.vader-respirator-2:before{
 	content: '';
 	position: absolute;
 	height: 8px;
@@ -209,7 +209,7 @@
 	border-radius: 50%;
 }
 
-.vader_respirator_3{
+.vader-respirator-3{
 	position: absolute;
 	height: 25px;
 	width: 6px;
@@ -217,7 +217,7 @@
 	top: 265px; left: 79px;
 }
 
-.vader_respirator_3:after{
+.vader-respirator-3:after{
 	content: '';
 	position: absolute;
 	height: 25px;
@@ -226,7 +226,7 @@
 	top: 0px; left: 42px;
 }
 
-.vader_respirator_3:before{
+.vader-respirator-3:before{
 	content: '';
 	position: absolute;
 	height: 153px;

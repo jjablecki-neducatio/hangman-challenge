@@ -1,0 +1,131 @@
+.answer-1 {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  margin: 0 auto;
+}
+
+.answer-1 div {
+  display: inline-block;
+  border-bottom: 3px solid #585858;
+}
+
+.answer-1:after {
+  content: counter(sum);
+  position: absolute;
+  bottom: 150px;
+  left: 0px;
+  color: #d9d3d3;
+  height: 100px;
+  width: 100px;
+  padding: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 5.5em;
+  margin: 8px;
+  border-radius: 4px;
+  border: solid 2px rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, .2);
+}
+
+/* create custom labels */
+.letter.word-1 {
+  color: #d9d3d3;
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 2.8em;
+  cursor: pointer;
+  margin: 8px;
+  border-radius: 4px;
+  border: solid 2px rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, .1);
+  cursor: pointer;
+  transition: all .1s;
+}
+
+/* change bg color of letter on click */
+input.word-1:checked + label.bad.word-1 {
+  pointer-events: none;
+  background-color: #0A0A0A;
+  color: #555252;
+  border: solid 2px hsla(0, 100%, 67%, 1);
+  box-shadow: 0 0 2rem 0.5rem hsla(0, 50%, 59%, .7);
+}
+input.word-1:checked + label.good.word-1 {
+  pointer-events: none;
+  background-color: #0A0A0A;
+  color: #555252;
+  border: solid 2px hsl(120, 100%, 65%);
+  box-shadow: 0 0 3rem 0.5rem hsla(120, 95%, 62%, 0.61);
+}
+
+input.word-1.bad:checked {
+  counter-increment: sum -1;
+}
+
+input.word-1.good:not(:checked) ~ .win-1 {
+  visibility: hidden;
+}
+
+input.word-1.bad:checked ~ input.word-1.bad:checked ~ input.word-1.bad:checked ~ input.word-1.bad:checked ~ input.word-1.bad:checked ~ input.word-1.bad:checked ~ .game-over-1 {
+  visibility: visible;
+}
+
+input.bad.word-1:checked ~ .hangman .head {
+  visibility: visible;
+}
+input.bad.word-1:checked ~ input.bad.word-1:checked ~ .hangman .corp  {
+  visibility: visible;
+}
+input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ .hangman .cloak-left, input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ .hangman .cloak-right {
+  visibility: visible;
+}
+input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ .hangman .grip {
+  visibility: visible;
+}
+input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ .hangman .blade {
+  visibility: visible;
+}
+
+input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ input.bad.word-1:checked ~ .hangman .sword {
+  top: 260px;
+  left: 300px;
+  transform: rotate(130deg);
+}
+
+
+.win-1 {
+  visibility: visible;
+}
+
+.game-over-1 {
+  visibility: hidden;
+}
+
+.win-1, .game-over-1 {
+  background-color: rgba(222,222,222,0.7);
+  color: #222;
+}
+
+.second-word .next:checked ~ .third-word {
+  visibility: visible;
+}
+
+.third-word {
+  visibility: hidden;
+}
+
+.third-word {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #585858;
+  background-color: #0A0A0A;
+  height: 100%;
+  width: 100%;
+}

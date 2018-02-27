@@ -40,7 +40,7 @@
       <div class="click click-2"></div>
       <div class="click click-3"></div>
       <div class="click click-4"></div>
-      <div class="vader_wrapper">
+      <div class="vader-wrapper">
         <div class="corp"></div>
         <div class="cloak-right"></div>
         <div class="cloak-left"></div>
@@ -49,17 +49,17 @@
           <div class="grip"></div>
         </div>
         <div class="head">
-          <div class="vader_head_top"></div>
-          <div class="vader_head_right_shade"></div>
-          <div class="vader_head_left"></div>
-          <div class="vader_head_right"></div>
-          <div class="vader_head_left_shadow"></div>
-          <div class="vader_head_right_shadow"></div>
-          <div class="vader_right_eye"></div>
-          <div class="vader_left_eye"></div>
-          <div class="vader_respirator_1"></div>
-          <div class="vader_respirator_2"></div>
-          <div class="vader_respirator_3"></div>
+          <div class="vader-head-top"></div>
+          <div class="vader-head-right-shade"></div>
+          <div class="vader-head-left"></div>
+          <div class="vader-head-right"></div>
+          <div class="vader-head-left-shadow"></div>
+          <div class="vader-head-right-shadow"></div>
+          <div class="vader-right-eye"></div>
+          <div class="vader-left-eye"></div>
+          <div class="vader-respirator-1"></div>
+          <div class="vader-respirator-2"></div>
+          <div class="vader-respirator-3"></div>
         </div>
       </div>
     </div>
