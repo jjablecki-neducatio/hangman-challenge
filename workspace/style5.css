@@ -1,16 +1,16 @@
-.answer-3 {
+.answer-4 {
   position: absolute;
   bottom: 50px;
   left: 50px;
   margin: 0 auto;
 }
 
-.answer-3 div {
+.answer-4 div {
   display: inline-block;
   border-bottom: 3px solid #585858;
 }
 
-.answer-3:after {
+.answer-4:after {
   content: counter(sum);
   position: absolute;
   bottom: 150px;
@@ -29,7 +29,7 @@
 }
 
 /* create custom labels */
-.letter.word-3 {
+.letter.word-4 {
   color: #d9d3d3;
   position: relative;
   display: inline-block;
@@ -49,14 +49,14 @@
 }
 
 /* change bg color of letter on click */
-input.word-3:checked + label.bad.word-3 {
+input.word-4:checked + label.bad.word-4 {
   pointer-events: none;
   background-color: #0A0A0A;
   color: #555252;
   border: solid 2px hsla(0, 100%, 67%, 1);
   box-shadow: 0 0 2rem 0.5rem hsla(0, 50%, 59%, .7);
 }
-input.word-3:checked + label.good.word-3 {
+input.word-4:checked + label.good.word-4 {
   pointer-events: none;
   background-color: #0A0A0A;
   color: #555252;
@@ -64,63 +64,66 @@ input.word-3:checked + label.good.word-3 {
   box-shadow: 0 0 3rem 0.5rem hsla(120, 95%, 62%, 0.61);
 }
 
-input.word-3.bad:checked {
+input.word-4.bad:checked {
   counter-increment: sum -1;
 }
 
-input.word-3.good:not(:checked) ~ .win-3 {
+input.word-4.good:not(:checked) ~ .win {
   visibility: hidden;
 }
 
-input.word-3.bad:checked ~ input.word-3.bad:checked ~ input.word-3.bad:checked ~ input.word-3.bad:checked ~ input.word-3.bad:checked ~ input.word-3.bad:checked ~ .game-over-3 {
+input.word-4.bad:checked ~ input.word-4.bad:checked ~ input.word-4.bad:checked ~ input.word-4.bad:checked ~ input.word-4.bad:checked ~ input.word-4.bad:checked ~ .game-over-4 {
   visibility: visible;
 }
 
-input.bad.word-3:checked ~ .hangman .head {
+input.bad.word-4:checked ~ .hangman .head {
   visibility: visible;
 }
-input.bad.word-3:checked ~ input.bad.word-3:checked ~ .hangman .corp  {
+input.bad.word-4:checked ~ input.bad.word-4:checked ~ .hangman .corp  {
   visibility: visible;
 }
-input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ .hangman .cloak-left, input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ .hangman .cloak-right {
+input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ .hangman .cloak-left, input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ .hangman .cloak-right {
   visibility: visible;
 }
-input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ .hangman .grip {
+input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ .hangman .grip {
   visibility: visible;
 }
-input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ .hangman .blade {
+input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ .hangman .blade {
   visibility: visible;
 }
 
-input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~ .hangman .sword {
+input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ input.bad.word-4:checked ~ .hangman .sword {
   top: 260px;
   left: 300px;
   transform: rotate(130deg);
 }
 
-
-.win-3 {
+.win {
   visibility: visible;
 }
 
-.game-over-3 {
+.game-over-4 {
   visibility: hidden;
 }
 
-.win-3, .game-over-3 {
+.win, .game-over-4 {
   background-color: rgba(222,222,222,0.7);
   color: #222;
 }
 
-.third-word .next:checked ~ .fourth-word {
+.win h1 {
+  line-height: 0.4em;
+}
+
+.fourth-word .next:checked ~ .fifth-word {
   visibility: visible;
 }
 
-.fourth-word {
+.fifth-word {
   visibility: hidden;
 }
 
-.fourth-word {
+.fifth-word {
   position: absolute;
   top: 0;
   left: 0;
@@ -128,4 +131,8 @@ input.bad.word-3:checked ~ input.bad.word-3:checked ~ input.bad.word-3:checked ~
   background-color: #0A0A0A;
   height: 100%;
   width: 100%;
+}
+
+.fifth-word .win, .game-over-4 {
+  background-color: rgba(222,222,222,0.9);
 }

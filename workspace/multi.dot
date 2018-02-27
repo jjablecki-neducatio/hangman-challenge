@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/style2.css">
   <link rel="stylesheet" href="/style3.css">
   <link rel="stylesheet" href="/style4.css">
+  <link rel="stylesheet" href="/style5.css">
   <link rel="stylesheet" href="/vader.css">
   <link rel="stylesheet" href="/hangman.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -26,6 +27,9 @@
   /* fourth word */
   div span.word-3.letter-{{=letter}}-3 {visibility: hidden;}
   #{{=letter}}-3.word-3:checked ~ div span.word-3.letter-{{=letter}}-3 {visibility: visible;}
+  /* fifth word */
+  div span.word-4.letter-{{=letter}}-4 {visibility: hidden;}
+  #{{=letter}}-4.word-4:checked ~ div span.word-4.letter-{{=letter}}-4 {visibility: visible;}
   {{~}}
   </style>
   <section class="alphabet">
@@ -87,11 +91,63 @@
                         {{~}}
                         <br/>
                       </div>
-                      <div class="pop-up win">
+                      <div class="pop-up win-3">
                         <h1>Wygrana!</h1>
-                        <h1>udało Ci się odgadnąć wszystkie słowa :)</h1>
-                        <h1>Gratulacje!</h1>
-                        <a href="" class="reload">jeszcze raz</a>
+                        <input type="checkbox" class="next" id="fifth"></input>
+                        <label for="fifth" class="letter next" >Kolejne słowo</label>
+                        <div class="fifth-word" >
+                          <div class="alphabet">
+                            {{~it.alphabet :letter:letterIndex}}
+                            <input type="checkbox" id="{{=letter}}-4" class="word-4 {{?it.words[4].word.includes(letter)}}good{{??}}bad{{?}}"></input>
+                            <label for="{{=letter}}-4" class="letter word-4 {{?it.words[4].word.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
+                            {{~}}
+                            <div class="answer-4">
+                              {{~it.words[4].word :letter:letterIndex}}
+                              <div><span class="letter word-4 letter-{{=letter}}-4">{{=letter}}</span></div>
+                              {{~}}
+                              <br/>
+                            </div>
+                            <div class="pop-up win">
+                              <h1>Wygrana!</h1>
+                              <h1>udało Ci się odgadnąć wszystkie słowa :)</h1>
+                              <h1>Gratulacje!</h1>
+                              <a href="" class="reload">jeszcze raz</a>
+                            </div>
+                            <div class="pop-up game-over-4">
+                              <h1>Koniec gry!</h1>
+                              <a href="" class="reload">jeszcze raz</a>
+                            </div>
+                            <div class="hangman">
+                              <div class="click click-1"></div>
+                              <div class="click click-2"></div>
+                              <div class="click click-3"></div>
+                              <div class="click click-4"></div>
+                              <div class="vader-wrapper">
+                                <div class="corp"></div>
+                                <div class="cloak-right"></div>
+                                <div class="cloak-left"></div>
+                                <div class="sword">
+                                  <div class="blade"></div>
+                                  <div class="grip"></div>
+                                </div>
+                                <div class="head">
+                                  <div class="vader-head-top"></div>
+                                  <div class="vader-head-right-shade"></div>
+                                  <div class="vader-head-left"></div>
+                                  <div class="vader-head-right"></div>
+                                  <div class="vader-head-left-shadow"></div>
+                                  <div class="vader-head-right-shadow"></div>
+                                  <div class="vader-right-eye"></div>
+                                  <div class="vader-left-eye"></div>
+                                  <div class="vader-respirator-1"></div>
+                                  <div class="vader-respirator-2"></div>
+                                  <div class="vader-respirator-3"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       </div>
                       <div class="pop-up game-over-3">
                         <h1>Koniec gry!</h1>
