@@ -9,11 +9,14 @@
   <link rel="stylesheet" href="/style4.css">
   <link rel="stylesheet" href="/style5.css">
   <link rel="stylesheet" href="/vader.css">
-  <link rel="stylesheet" href="/hangman.css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <title>Hangman challenge</title>
+  <link rel="stylesheet" href="./styles-less.css"/>
+  <link rel="stylesheet" href="./styles-scss.css"/>
+  <link rel="stylesheet" href="./stars.css">
 </head>
 <body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
   <style>
   {{~it.alphabet :letter:letterIndex}}
   div span.word-0.letter-{{=letter}} {visibility: hidden;}
@@ -32,7 +35,7 @@
   #{{=letter}}-4.word-4:checked ~ div span.word-4.letter-{{=letter}}-4 {visibility: visible;}
   {{~}}
   </style>
-  <section class="alphabet">
+  <section class="main-wrapper">
     {{~it.alphabet :letter:letterIndex}}
     <input type="checkbox" id="{{=letter}}" class="word-0 {{?it.words[0].word.includes(letter)}}good{{??}}bad{{?}}"></input>
     <label for="{{=letter}}" class="letter word-0 {{?it.words[0].word.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
@@ -48,7 +51,9 @@
       <input type="checkbox" class="next" id="second"></input>
       <label for="second" class="letter next" >Kolejne słowo</label>
       <div class="second-word" >
-        <div class="alphabet">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="main-wrapper">
           {{~it.alphabet :letter:letterIndex}}
           <input type="checkbox" id="{{=letter}}-1" class="word-1 {{?it.words[1].word.includes(letter)}}good{{??}}bad{{?}}"></input>
           <label for="{{=letter}}-1" class="letter word-1 {{?it.words[1].word.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
@@ -64,7 +69,7 @@
             <input type="checkbox" class="next" id="third"></input>
             <label for="third" class="letter next" >Kolejne słowo</label>
             <div class="third-word" >
-              <div class="alphabet">
+              <div class="main-wrapper">
                 {{~it.alphabet :letter:letterIndex}}
                 <input type="checkbox" id="{{=letter}}-2" class="word-2 {{?it.words[2].word.includes(letter)}}good{{??}}bad{{?}}"></input>
                 <label for="{{=letter}}-2" class="letter word-2 {{?it.words[2].word.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
@@ -80,7 +85,7 @@
                   <input type="checkbox" class="next" id="fourth"></input>
                   <label for="fourth" class="letter next" >Kolejne słowo</label>
                   <div class="fourth-word" >
-                    <div class="alphabet">
+                    <div class="main-wrapper">
                       {{~it.alphabet :letter:letterIndex}}
                       <input type="checkbox" id="{{=letter}}-3" class="word-3 {{?it.words[3].word.includes(letter)}}good{{??}}bad{{?}}"></input>
                       <label for="{{=letter}}-3" class="letter word-3 {{?it.words[3].word.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
@@ -96,7 +101,7 @@
                         <input type="checkbox" class="next" id="fifth"></input>
                         <label for="fifth" class="letter next" >Kolejne słowo</label>
                         <div class="fifth-word" >
-                          <div class="alphabet">
+                          <div class="main-wrapper">
                             {{~it.alphabet :letter:letterIndex}}
                             <input type="checkbox" id="{{=letter}}-4" class="word-4 {{?it.words[4].word.includes(letter)}}good{{??}}bad{{?}}"></input>
                             <label for="{{=letter}}-4" class="letter word-4 {{?it.words[4].word.includes(letter)}}good{{??}}bad{{?}}">{{=letter}}</label>
@@ -107,7 +112,7 @@
                               {{~}}
                               <br/>
                             </div>
-                            <div class="pop-up win">
+                            <div class="pop-up win-4">
                               <h1>Wygrana!</h1>
                               <h1>udało Ci się odgadnąć wszystkie słowa :)</h1>
                               <h1>Gratulacje!</h1>
@@ -118,11 +123,8 @@
                               <a href="" class="reload">jeszcze raz</a>
                             </div>
                             <div class="hangman">
-                              <div class="click click-1"></div>
-                              <div class="click click-2"></div>
-                              <div class="click click-3"></div>
-                              <div class="click click-4"></div>
                               <div class="vader-wrapper">
+                                <div class="rope"></div>
                                 <div class="corp"></div>
                                 <div class="cloak-right"></div>
                                 <div class="cloak-left"></div>
@@ -137,28 +139,21 @@
                                   <div class="vader-head-right"></div>
                                   <div class="vader-head-left-shadow"></div>
                                   <div class="vader-head-right-shadow"></div>
-                                  <div class="vader-right-eye"></div>
-                                  <div class="vader-left-eye"></div>
                                   <div class="vader-respirator-1"></div>
                                   <div class="vader-respirator-2"></div>
-                                  <div class="vader-respirator-3"></div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      </div>
                       <div class="pop-up game-over-3">
                         <h1>Koniec gry!</h1>
                         <a href="" class="reload">jeszcze raz</a>
                       </div>
                       <div class="hangman">
-                        <div class="click click-1"></div>
-                        <div class="click click-2"></div>
-                        <div class="click click-3"></div>
-                        <div class="click click-4"></div>
                         <div class="vader-wrapper">
+                          <div class="rope"></div>
                           <div class="corp"></div>
                           <div class="cloak-right"></div>
                           <div class="cloak-left"></div>
@@ -173,11 +168,8 @@
                             <div class="vader-head-right"></div>
                             <div class="vader-head-left-shadow"></div>
                             <div class="vader-head-right-shadow"></div>
-                            <div class="vader-right-eye"></div>
-                            <div class="vader-left-eye"></div>
                             <div class="vader-respirator-1"></div>
                             <div class="vader-respirator-2"></div>
-                            <div class="vader-respirator-3"></div>
                           </div>
                         </div>
                       </div>
@@ -189,11 +181,8 @@
                   <a href="" class="reload">jeszcze raz</a>
                 </div>
                 <div class="hangman">
-                  <div class="click click-1"></div>
-                  <div class="click click-2"></div>
-                  <div class="click click-3"></div>
-                  <div class="click click-4"></div>
                   <div class="vader-wrapper">
+                    <div class="rope"></div>
                     <div class="corp"></div>
                     <div class="cloak-right"></div>
                     <div class="cloak-left"></div>
@@ -208,11 +197,8 @@
                       <div class="vader-head-right"></div>
                       <div class="vader-head-left-shadow"></div>
                       <div class="vader-head-right-shadow"></div>
-                      <div class="vader-right-eye"></div>
-                      <div class="vader-left-eye"></div>
                       <div class="vader-respirator-1"></div>
                       <div class="vader-respirator-2"></div>
-                      <div class="vader-respirator-3"></div>
                     </div>
                   </div>
                 </div>
@@ -224,11 +210,8 @@
             <a href="" class="reload">jeszcze raz</a>
           </div>
           <div class="hangman">
-            <div class="click click-1"></div>
-            <div class="click click-2"></div>
-            <div class="click click-3"></div>
-            <div class="click click-4"></div>
             <div class="vader-wrapper">
+              <div class="rope"></div>
               <div class="corp"></div>
               <div class="cloak-right"></div>
               <div class="cloak-left"></div>
@@ -243,11 +226,8 @@
                 <div class="vader-head-right"></div>
                 <div class="vader-head-left-shadow"></div>
                 <div class="vader-head-right-shadow"></div>
-                <div class="vader-right-eye"></div>
-                <div class="vader-left-eye"></div>
                 <div class="vader-respirator-1"></div>
                 <div class="vader-respirator-2"></div>
-                <div class="vader-respirator-3"></div>
               </div>
             </div>
           </div>
@@ -259,11 +239,8 @@
       <a href="" class="reload">jeszcze raz</a>
     </div>
     <div class="hangman">
-      <div class="click click-1"></div>
-      <div class="click click-2"></div>
-      <div class="click click-3"></div>
-      <div class="click click-4"></div>
       <div class="vader-wrapper">
+        <div class="rope"></div>
         <div class="corp"></div>
         <div class="cloak-right"></div>
         <div class="cloak-left"></div>
@@ -278,11 +255,8 @@
           <div class="vader-head-right"></div>
           <div class="vader-head-left-shadow"></div>
           <div class="vader-head-right-shadow"></div>
-          <div class="vader-right-eye"></div>
-          <div class="vader-left-eye"></div>
           <div class="vader-respirator-1"></div>
           <div class="vader-respirator-2"></div>
-          <div class="vader-respirator-3"></div>
         </div>
       </div>
     </div>
