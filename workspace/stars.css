@@ -44,20 +44,20 @@
   z-index: -1;
 }
 
-.second-word > .stars, .second-word > .twinkling {
-  z-index: 0
+.second-word.stars {
+  z-index: 0;
 }
 
-.third-word > .stars, .third-word > .twinkling {
-  z-index: 1
+.third-word.stars {
+  z-index: 0;
 }
 
-.fourth-word > .stars, .fourth-word > .twinkling {
-  z-index: 2
+.fourth-word.stars {
+  z-index: 0;
 }
 
-.fifth-word > .stars, .fifth-word > .twinkling {
-  z-index: 3
+.fifth-word.stars {
+  z-index: 0;
 }
 
 

@@ -47,12 +47,12 @@
       <br/>
     </div>
     <div id="win" class="pop-up win-0">
+      <div class="stars">
+      <div class="twinkling"></div>
       <h1>Wygrana!</h1>
       <input type="checkbox" class="next" id="second"></input>
       <label for="second" class="letter next" >Kolejne słowo</label>
-      <div class="second-word" >
-        <div class="stars"></div>
-        <div class="twinkling"></div>
+      <div class="second-word stars">
         <div class="main-wrapper">
           {{~it.alphabet :letter:letterIndex}}
           <input type="checkbox" id="{{=letter}}-1" class="word-1 {{?it.words[1].word.includes(letter)}}good{{??}}bad{{?}}"></input>
@@ -65,10 +65,12 @@
             <br/>
           </div>
           <div class="pop-up win-1">
+            <div class="stars">
+            <div class="twinkling"></div>
             <h1>Wygrana!</h1>
             <input type="checkbox" class="next" id="third"></input>
             <label for="third" class="letter next" >Kolejne słowo</label>
-            <div class="third-word" >
+            <div class="third-word stars" >
               <div class="main-wrapper">
                 {{~it.alphabet :letter:letterIndex}}
                 <input type="checkbox" id="{{=letter}}-2" class="word-2 {{?it.words[2].word.includes(letter)}}good{{??}}bad{{?}}"></input>
@@ -81,10 +83,12 @@
                   <br/>
                 </div>
                 <div class="pop-up win-2">
+                  <div class="stars">
+                  <div class="twinkling"></div>
                   <h1>Wygrana!</h1>
                   <input type="checkbox" class="next" id="fourth"></input>
                   <label for="fourth" class="letter next" >Kolejne słowo</label>
-                  <div class="fourth-word" >
+                  <div class="fourth-word stars" >
                     <div class="main-wrapper">
                       {{~it.alphabet :letter:letterIndex}}
                       <input type="checkbox" id="{{=letter}}-3" class="word-3 {{?it.words[3].word.includes(letter)}}good{{??}}bad{{?}}"></input>
@@ -97,10 +101,12 @@
                         <br/>
                       </div>
                       <div class="pop-up win-3">
+                        <div class="stars">
+                        <div class="twinkling"></div>
                         <h1>Wygrana!</h1>
                         <input type="checkbox" class="next" id="fifth"></input>
                         <label for="fifth" class="letter next" >Kolejne słowo</label>
-                        <div class="fifth-word" >
+                        <div class="fifth-word stars" >
                           <div class="main-wrapper">
                             {{~it.alphabet :letter:letterIndex}}
                             <input type="checkbox" id="{{=letter}}-4" class="word-4 {{?it.words[4].word.includes(letter)}}good{{??}}bad{{?}}"></input>
@@ -113,14 +119,20 @@
                               <br/>
                             </div>
                             <div class="pop-up win-4">
+                              <div class="stars">
+                              <div class="twinkling"></div>
                               <h1>Wygrana!</h1>
                               <h1>udało Ci się odgadnąć wszystkie słowa :)</h1>
                               <h1>Gratulacje!</h1>
                               <a href="" class="reload">jeszcze raz</a>
                             </div>
+                            </div>
                             <div class="pop-up game-over-4">
+                              <div class="stars">
+                              <div class="twinkling"></div>
                               <h1>Koniec gry!</h1>
                               <a href="" class="reload">jeszcze raz</a>
+                            </div>
                             </div>
                             <div class="hangman">
                               <div class="vader-wrapper">
@@ -145,11 +157,16 @@
                               </div>
                             </div>
                           </div>
+                          <div class="twinkling"></div>
                         </div>
                       </div>
+                      </div>
                       <div class="pop-up game-over-3">
+                        <div class="stars">
+                        <div class="twinkling"></div>
                         <h1>Koniec gry!</h1>
                         <a href="" class="reload">jeszcze raz</a>
+                      </div>
                       </div>
                       <div class="hangman">
                         <div class="vader-wrapper">
@@ -174,11 +191,16 @@
                         </div>
                       </div>
                     </div>
+                    <div class="twinkling"></div>
                   </div>
                 </div>
+                </div>
                 <div class="pop-up game-over-2">
+                  <div class="stars">
+                  <div class="twinkling"></div>
                   <h1>Koniec gry!</h1>
                   <a href="" class="reload">jeszcze raz</a>
+                </div>
                 </div>
                 <div class="hangman">
                   <div class="vader-wrapper">
@@ -203,11 +225,16 @@
                   </div>
                 </div>
               </div>
+              <div class="twinkling"></div>
             </div>
           </div>
+          </div>
           <div id="game-over" class="pop-up game-over-1">
+            <div class="stars">
+            <div class="twinkling"></div>
             <h1>Koniec gry!</h1>
             <a href="" class="reload">jeszcze raz</a>
+          </div>
           </div>
           <div class="hangman">
             <div class="vader-wrapper">
@@ -232,11 +259,16 @@
             </div>
           </div>
         </div>
+        <div class="twinkling"></div>
       </div>
     </div>
+    </div>
     <div id="game-over" class="pop-up game-over-0">
-      <h1>Koniec gry!</h1>
-      <a href="" class="reload">jeszcze raz</a>
+      <div class="stars">
+      <div class="twinkling"></div>
+        <h1>Koniec gry!</h1>
+        <a href="" class="reload">jeszcze raz</a>
+      </div>
     </div>
     <div class="hangman">
       <div class="vader-wrapper">

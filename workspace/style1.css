@@ -5,10 +5,22 @@ body {
 }
 
 .main-wrapper {
-  width: 1250px;
-  margin: 430px auto 0;
+  width: 1000px;
+  margin: 80px 10% 0;
+  float: right;
   counter-reset: sum 6;
   text-align: center;
+  z-index: 2;
+}
+
+label.letter {
+  width: 60px!important;
+  height: 60px!important;
+  font-size: 52px!important;
+}
+
+label.letter:hover {
+  background-color: rgba(00,00,00,0.1);
 }
 
 .hangman {
@@ -22,10 +34,11 @@ body {
   text-align: center;
   border: 6px solid #ffe919;
   border-radius: 30px;
+  background-color: rgba(256,233,25,0.1);
 }
 
 .answer-0 {
-  margin-top: 50px;
+  margin-top: 230px;
 }
 
 .answer-0 div {
@@ -36,8 +49,8 @@ body {
 .answer-0:after {
   content: counter(sum);
   position: absolute;
-  bottom: 52px;
-  left: 0px;
+  top: 500px;
+  left: 20px;
   color: #ffe919;
   height: 100px;
   width: 100px;
@@ -62,6 +75,8 @@ body {
 
 .pop-up h1 {
   font-size: 5em;
+  color: #ffe919;
+  text-transform: uppercase;
 }
 
 .win-0 {
@@ -78,15 +93,22 @@ body {
 }
 
 .reload, label.next {
-  color: #000000;
+  text-transform: uppercase;
+  color: #ffe919;
   padding: 15px 30px;
   text-align: center;
   font-size: 2.8em;
   cursor: pointer;
   text-decoration: none;
-  border-radius: 40px;
-  border: solid 2px #fff;
-  background-color: rgba(255, 255, 255, 0.7);
+  border: 6px solid #ffe919;
+  border-radius: 30px;
+  background-color: rgba(256,233,25,0.1);
+}
+
+.reload:hover, label.next:hover {
+  color: #ffe919;
+  border: 6px solid #ffe919;
+  background-color: rgba(256,233,25,0.3);
 }
 
 /* hide default checkbox */
@@ -97,6 +119,10 @@ input {
 }
 
 /* create custom labels */
+.letter {
+  z-index: 1;
+}
+
 .letter.word-0 {
   color: #d9d3d3;
   position: relative;
