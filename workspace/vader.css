@@ -170,19 +170,29 @@
 
 .sword {
   position: absolute;
-  left: 285px;
-  transform: rotate(40deg);
+  left: 140px;
+  top: 120px;
+  width: 500px;
+  transform: rotate(-50deg);
 }
 .grip {
-  height: 6rem;
-  width: .5rem;
+  position: relative;
+  top: 10px;
+  right: 90px;
+  height: 0.5rem;
+  width: 6rem;
   background-color: #111;
 }
 .blade {
-  height: 20rem;
-  width: .5rem;
-  border-top-right-radius: 0.2rem;
-  border-top-left-radius: 0.2rem;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  border-radius: 0 5vw 5vw 0;
+  border-top-right-radius: 10vw 5vw;
+  border-bottom-right-radius: 10vw 5vw;
+  transition: width 0.5s ease-in-out;
+  height: 0.5rem;
+  width: 0;
   background-color: #ff5757;
   box-shadow: 0 0 2rem 0.5rem rgba(203, 98, 98, 0.7);
 }

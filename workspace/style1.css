@@ -183,6 +183,7 @@ input.bad.word-0:checked ~ input.bad.word-0:checked ~ input.bad.word-0:checked ~
 }
 input.bad.word-0:checked ~ input.bad.word-0:checked ~ input.bad.word-0:checked ~ input.bad.word-0:checked ~ input.bad.word-0:checked ~ .hangman .blade {
   visibility: visible;
+  width: 20rem;
 }
 
 input.bad.word-0:checked ~ input.bad.word-0:checked ~ input.bad.word-0:checked ~ input.bad.word-0:checked ~ input.bad.word-0:checked ~ input.bad.word-0:checked ~ .hangman .sword {

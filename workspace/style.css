@@ -153,6 +153,7 @@ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ 
 }
 input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .blade {
   visibility: visible;
+  width: 20rem;
 }
 
 input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ input.bad:checked ~ .hangman .sword {
