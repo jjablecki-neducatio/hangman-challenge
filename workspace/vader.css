@@ -9,6 +9,11 @@
   visibility: hidden;
 }
 
+.head {
+  transform: scale(.001);
+  transition: 500ms ease-out;
+}
+
 .rope {
   width: 10px;
   height: 40px;
@@ -20,33 +25,38 @@
 
 .corp {
   background-color: #333;
-  height: 245px;
+  height: 0;
   width: 200px;
   border-radius: 100px;
   box-shadow: 0px 1px 15px -5px black;
   position: absolute;
   top: 215px;
-}
-.cloak-right {
-  position: absolute;
-  height: 0;
-  width: 0;
-  top: 215px;
-  left: 120px;
-  border-right: 105px solid #222;
-  border-bottom: 245px solid #222;
-  border-radius: 0 100% 10% 0 / 0 71%;
+  transition: height 0.5s ease-in-out;
 }
 .cloak-left {
   position: absolute;
   height: 0;
   width: 0;
   top: 215px;
-  right: 120px;
-  border-right: 105px solid #222;
+  left: -25px;
+  border-right: 0 solid #222;
   border-bottom: 245px solid #222;
-  border-radius: 0% 100% 10% 0% / 0% 71%;
+  border-radius: 100% 0 0 10%/ 71% 0;
+  transition: border-right 0.5s ease-in-out;
+  animation: cloak 5s linear infinite;
+}
+.cloak-right {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 215px;
+  right: -25px;
+  border-right: 0 solid #222;
+  border-bottom: 245px solid #222;
+  border-radius: 100% 0 0 10%/ 71% 0;
   transform: scaleX(-1);
+  transition: border-right 0.5s ease-in-out;
+  animation: cloak 5s linear infinite;
 }
 
 .vader-head-top {
@@ -118,26 +128,38 @@
   background-color: #222;
   top: 180px;
   left: 100px;
+  animation-name: resp-1;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .vader-respirator-1:after {
-    content: '';
-    position: absolute;
-    height: 30px;
-    width: 10px;
-    background-color: #222;
-    top: 35px;
-    left: 25px;
-  }
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 10px;
+  background-color: #222;
+  top: 35px;
+  left: 25px;
+  animation-name: resp-1-a;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
 .vader-respirator-1:before {
-    content: '';
-    position: absolute;
-    height: 45px;
-    width: 10px;
-    background-color: #222;
-    top: 20px;
-    left: 10px;
+  content: '';
+  position: absolute;
+  height: 45px;
+  width: 10px;
+  background-color: #222;
+  top: 20px;
+  left: 10px;
+  animation-name: resp-1-b;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .vader-respirator-2 {
@@ -147,41 +169,57 @@
   background-color: #333;
   top: 180px;
   left: 95px;
+  animation-name: resp;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .vader-respirator-2:after {
-    content: '';
-    position: absolute;
-    height: 30px;
-    width: 10px;
-    background-color: #333;
-    top: 35px;
-    left: -30px;
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 10px;
+  background-color: #333;
+  top: 35px;
+  left: -30px;
+  animation-name: resp-a;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .vader-respirator-2:before {
-    content: '';
-    position: absolute;
-    height: 45px;
-    width: 10px;
-    background-color: #333;
-    top: 20px;
-    left: -15px;
+  content: '';
+  position: absolute;
+  height: 45px;
+  width: 10px;
+  background-color: #333;
+  top: 20px;
+  left: -15px;
+  animation-name: resp-b;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .sword {
   position: absolute;
-  left: 140px;
-  top: 120px;
+  left: 250px;
+  top: 330px;
   width: 500px;
-  transform: rotate(-50deg);
+  transform: rotate(310deg);
+  transform-origin: left bottom;
+  transition: 1s;
+  z-index: 1;
 }
 .grip {
   position: relative;
-  top: 10px;
-  right: 90px;
+  top: -300px;
+  right: -300px;
   height: 0.5rem;
   width: 6rem;
   background-color: #111;
+  transition: 1s ease-out;
 }
 .blade {
   position: absolute;
@@ -195,4 +233,69 @@
   width: 0;
   background-color: #ff5757;
   box-shadow: 0 0 2rem 0.5rem rgba(203, 98, 98, 0.7);
+}
+
+@keyframes resp {
+  0% {
+  }
+  100% {
+    height: 80px;
+    transform: translateY(-5px) translateX(-2px);
+    width: 7px;
+  }
+}
+@keyframes resp-b {
+  0% {
+  }
+  100% {
+    height: 60px;
+    transform: translateX(-2px);
+    width: 12px;
+  }
+}
+@keyframes resp-a {
+  0% {
+  }
+  100% {
+    height: 45px;
+    transform: translateX(-4px);
+    width: 12px;
+  }
+}
+
+@keyframes resp-1 {
+  0% {
+  }
+  100% {
+    height: 80px;
+    transform: translateY(-5px);
+    width: 7px;
+  }
+}
+@keyframes resp-1-b {
+  0% {
+  }
+  100% {
+    height: 60px;
+    transform: translateX(2px);
+    width: 12px;
+  }
+}
+@keyframes resp-1-a {
+  0% {
+  }
+  100% {
+    height: 45px;
+    transform: translateX(4px);
+    width: 12px;
+  }
+}
+@keyframes cloak {
+  0% {}
+  50% {
+    border-radius: 100% 20% 30% 20%/ 61% 10%;
+  }
+  100% {
+    border-radius: 100% 0 0 10%/ 71% 0;
+  }
 }
